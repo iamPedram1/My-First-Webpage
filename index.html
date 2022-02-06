@@ -8,15 +8,38 @@
     <title>Data web</title>
 </head>
 <body>
-    <nav class="nav__top flex-row">
-        <span class="bg-logo logo1"></span>
-        <ul class="list flex-row ">
-            <a href=""><li>Home</li></a>
-            <a href=""><li>About</li></a>
-            <a href=""><li>Service</li></a>
-            <a href=""><li>Contact</li></a>
-            <a href=""><li>Sign Up</li></a>
-        </ul>
-    </nav>
+    <section class="navigation__bar">
+        <nav class="nav__top">
+            <section>
+                <img class="nav_logo"src="/images/logo.png" alt="">
+            </section>
+            <section class="collapsible">
+                    <span>
+                        <svg class="icon menu__icon icon--white collapsible">
+                            <use xlink:href="images/sprite.svg#menu"></use>
+                        </svg>
+                    </span>
+                        <ul class="list nav__list collapsible__content">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Service</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">Sign Up</a></li>
+                        </ul>
+            </section>
+        </nav>
+        <section class="hero grid">
+            <div class="hero__content">
+                <h1 class="hero__header">Power ful <br>Web Hosting</h1>
+                <p class="hero__header2">Landing Page 2019</p>
+                <p class="hero__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
+                <button class="btn">Get Started</button>
+            </div>
+            <div>
+                <img src="/images/img.png" class="hero__image">
+            </div>
+    </section>
+    
+    <script src="/js/main.js"></script>
 </body>
 </html>
