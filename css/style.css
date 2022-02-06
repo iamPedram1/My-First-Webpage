@@ -7,6 +7,7 @@
   --color-body: #090808;
   --color-pure-black: #000;
   --color-icon: #983cb5;
+  --color-hover: #8308eb;
 }
 
 *,
@@ -66,6 +67,10 @@ h3 {
   h3 {
     font-size: 3rem;
   }
+}
+
+.align--center {
+  text-align: center;
 }
 
 /* Flex */
@@ -195,6 +200,8 @@ a {
   padding: 1.5rem 4rem;
   text-transform: uppercase;
   margin: 3rem 0;
+  cursor: pointer;
+  border: 0;
 }
 
 .hero__image {
@@ -233,7 +240,6 @@ a {
 .main__content {
   display: flex;
   flex-direction: column;
-  text-align: center;
   align-items: center;
 }
 
@@ -254,7 +260,6 @@ a {
 .main__text {
   color: var(--color-body);
   margin: 1rem 2rem 1rem 2rem;
-  text-align: center;
 }
 
 .main__content .btn {
@@ -262,3 +267,83 @@ a {
   color: var(--color-primary);
   font-weight: 300;
 }
+
+/* Services */
+
+.services {
+  background: var(--color-accent);
+}
+
+.services__header {
+  color: var(--color-primary);
+}
+
+.services__heading {
+  padding-top: 4rem;
+  margin-bottom: 0;
+}
+
+.services__paragraph {
+  margin: 0 0 5rem 0;
+}
+
+.service--border {
+  display: inline-block;
+  border: 1px solid var(--color-primary);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 2rem 3rem;
+  padding: 2rem;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 1s;
+}
+
+.service--hover:hover {
+  background: var(--color-icon);
+}
+
+.service__logo {
+  background: var(--color-primary);
+  padding: 2rem;
+  border-radius: 50%;
+}
+
+.service1 a {
+  color: var(--color-primary);
+}
+
+.services_content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.service__name,
+.service__describe {
+  color: var(--color-primary);
+}
+
+.services__btn {
+  transition: background 0.7s, color 1s;
+}
+
+.services__btn:hover {
+  background: var(--color-hover);
+  color: var(--color-primary);
+}
+
+@media screen and (min-width: 768px) {
+  .services_content {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto-fit minmax(100px, 1fr));
+    padding: 0 4.5rem;
+  }
+  .services__footer__btn {
+    width: 50vw;
+  }
+}
+
+/* TODO: Correct the Footer Button Position */
