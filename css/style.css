@@ -10,7 +10,6 @@
   --color-hover: #8308eb;
 }
 
-
 *,
 *::before,
 *::after {
@@ -343,6 +342,7 @@ li {
 
 .main__content img {
   width: 542px;
+  max-width: 100%;
   height: 452px;
   padding: 0 2rem;
   object-fit: contain;
@@ -423,24 +423,37 @@ li {
   color: var(--color-primary);
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 728px) {
+  .services_content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0;
+  }
+
+  .services__btn {
+    padding-bottom: 1.5rem;
+    margin: 2rem 8rem 5rem;
+    transform: translateX(200px);
+  }
+}
+
+@media screen and (min-width: 932px) {
   .services_content {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, auto-fit minmax(100px, 1fr));
-    padding: 0 4.5rem;
+    padding: 0;
   }
   .services__btn {
     grid-column: 2;
     padding-bottom: 1.5rem;
     margin: 2rem 8rem 5rem;
+    transform: translateX(0);
   }
   .service__name {
     font-size: 2rem;
   }
 }
-
-/* TODO: Correct the Footer Button Position */
 
 /* Features */
 
@@ -474,7 +487,6 @@ li {
 
 .features__section {
   transition: transform 1s;
-
 }
 
 .features__section:hover {
@@ -518,7 +530,6 @@ li {
   .features__content {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
   }
 
   .feature1 {
@@ -568,13 +579,10 @@ li {
 
 .contactus {
   background: var(--color-accent);
-  box-shadow: 0 0 0 26px var(--color-accent);
   flex-direction: column;
   justify-content: center;
   border-top: 4rem solid var(--color-accent);
-  border-radius: 30px;
-  margin: 0 2rem;
-  transform: translateY(-40px);
+  margin: 0 10vw;
 }
 
 .contactus input {
@@ -615,13 +623,7 @@ li {
   .features__container {
     max-height: 1150px;
   }
-  .contactus {
-    max-width: 400px;
-    max-height: 624px;
-    margin-top: 5rem;
-    transform: translate(50%, -40%);
-    transition: transform 0.2s;
-  }
+
   .contact__message {
     height: 100px;
   }
@@ -629,6 +631,9 @@ li {
     margin-bottom: 0;
   }
 
+  .contactus {
+    margin: 0 20vw;
+  }
   .contact input {
     margin: 1rem 5rem;
   }
@@ -641,10 +646,6 @@ li {
 }
 
 @media screen and (min-width: 920px) {
-  .contactus {
-    transform: translate(108%, -40%);
-  }
-
   .contact__field {
     min-height: 700px;
   }
